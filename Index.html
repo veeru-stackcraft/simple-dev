@@ -6,88 +6,9 @@
 </head>
 
 <body>
-  <h1>Hello</h1>
+  <h1>JS examples</h1>
 
-  <script>
-    function VoterAge(age) {
-      if (age < 18 || age == null) {
-        throw new Error("age must above 18 years")
-      }
-      console.log(`eligible`)
-    }
-    // Voter(17)
-
-    function VolterCity(city) {
-      if (city == "bangalore") {
-        throw new Error("City off limit")
-      }
-      console.log("You can vote")
-    }
-
-    // VolterCity("bangalore")
-
-    // try {
-    //   VoterAge(17)
-    //   VolterCity("bangalore")
-    // } catch (error) {
-    //   console.error(error.message);
-    // }
-
-
-
-    function tryCatch(callback) {
-      try {
-        callback()
-        console.log("Try block")
-      } catch (error) {
-        console.error(error.message)
-      }
-
-    }
-
-    eval(VoterAge(19))
-    // tryCatch(VoterAge)
-    tryCatch(() => VoterAge("18"))
-    tryCatch(() => VoterAge(17))
-
-
-
-
-
-    async function getData(url) {
-
-      try {
-        let res = await fetch(url)
-        debugger
-        if (!res.ok) {
-          throw new Error("API url seems broken")
-        }
-        let data = await res.json()
-        console.log(data)
-
-      } catch (error) {
-        console.error("Error message: ", error.message)
-      } finally {
-        console.log("final block")
-      }
-    }
-
-    getData("https://fakestoreapi.com/productss")
-
-
-    // async function fetchData() {
-    //   try {
-    //     let res = await fetch("https://fakestoreapi.com/productsa");
-    //     let d = await res.json();
-    //     console.log(d);
-    //   } catch (error) {
-    //     console.error("Error fetching data:", error.message);
-    //   }
-    // }
-    // fetchData();
-
-    console.log("After an error")
-  </script>
+  <script src="objectsCallApply.js"></script>
 
 </body>
 
