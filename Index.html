@@ -15,6 +15,23 @@
   <p id="hiddenTwo"></p>
   <p id="hiddenThree"></p>
 
+  <ul id="ulelement"></ul>
+
+
+  <a href="https://www.google.com/" onclick="handleClick">Hello</a>
+
+
+  <script>
+    function handleClick(evnt) {
+      alert("Event handled, but default action prevented");
+      evnt.preventDefault(); // Prevents the default action
+      evnt.stopPropagation()
+
+    }
+  </script>
+
+
+
   <script src="objectsCallApply.js"></script>
   <script src="clouser.js"></script>
   <script src="eventListners.js"></script>
